@@ -1,0 +1,39 @@
+# 全局调试模式
+debug: false
+
+# 切换消息（支持变量：%player%, %state%）
+toggle-messages:
+  enable: "&a[方块全息] &f%player% &a已启用功能"
+  disable: "&c[方块全息] &f%player% &c已禁用功能"
+
+# 方块特定配置
+blocks:
+  # 附魔台配置
+  ENCHANTING_TABLE:
+    # 功能开关
+    enable-hologram: true
+    enable-left-click: true
+    enable-shift-right-click: true
+    
+    # 全息文字配置
+    hologram:
+      lines:
+        - "&6&l高级附魔台"
+        - "&e左键: 查看信息"
+        - "&eShift+右键: 开启附魔"
+      offset-x: 0.5
+      offset-y: 1.2
+      offset-z: 0.5
+      line-spacing: 0.25 # 行间距，单位方块
+      background-enabled: false # 是否启用背景
+      background-argb: 0x4C000000 # 背景颜色（ARGB整数），仅在启用时生效
+    
+    # 左键点击命令
+    left-click-command: "tell %player% &a这是高级附魔台"
+    
+    # Shift+右键点击命令
+    shift-right-click-command: "enchantgui open %player%"
+    
+    # 破坏保护配置
+    break-require-shift: true
+    break-message: "&c请按住Shift键并左键破坏附魔台！"

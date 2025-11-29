@@ -1,0 +1,20 @@
+name: BlockHologram
+version: 2.0.0
+main: com.magicbili.blockholo.BlockHologramPlugin
+api-version: 1.21
+description: Display custom holograms on blocks
+author: MagicBili
+depend: [FancyHolograms]
+commands:
+  blockholo:
+    description: 控制方块全息插件
+    usage: /blockholo [reload|toggle]
+    permission: blockholo.use
+    permission-message: 你没有权限使用此命令!
+permissions:
+  blockholo.toggle:
+    description: 允许切换全息显示状态
+    default: true
+  blockholo.reload:
+    description: 允许重载插件配置
+    default: op
